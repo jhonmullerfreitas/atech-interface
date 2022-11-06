@@ -4,7 +4,9 @@ const Home = () => {
 
 
     return(
-        <div>Teste Children</div>
+        <>
+            <p>Home Componente</p>
+        </>
     )
 }
 

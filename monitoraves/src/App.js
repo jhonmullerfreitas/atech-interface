@@ -1,13 +1,10 @@
 import './App.css';
-import BasePage from './components/basepage';
-import Home from './components/home';
+import Routes from './routes';
 
 function App() {
   return (
     <div className="App">
-      <BasePage>
-        <Home/>
-      </BasePage>
+      <Routes/>
     </div>
   );
 }
