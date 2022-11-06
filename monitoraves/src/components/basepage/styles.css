@@ -1,0 +1,74 @@
+
+
+.container-basepage{
+    background-color: #F5E7CC;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cabecalho{
+    height: 10vh;
+    width: 100vw;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FFBA7C;
+}
+
+.logoMonitorave{
+    height: 10vh;
+    width: 20vw;
+}
+
+.menu-cabecalho{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    list-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    color:#7C8046;
+}
+
+.minhaConta{
+    height: 5vh;
+    width: 20vw;
+}
+
+
+.resumo { grid-area: resumo; }
+.lotes { grid-area: lotes; }
+.graficos { grid-area: graficos; }
+.tabelas { grid-area: tabelas; }
+
+.menu-lateral{
+    display: grid;
+    grid-template-areas: 
+    "resumo lotes"
+    "graficos tabelas" 
+    ;
+    
+    height: 20vh;
+    width: 100vw;
+    background-color: #919974;
+}
+
+.opcao-menu-lateral{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10vh;
+
+    border: 1px solid #F5E7CC;
+    
+    color: #F5E7CC;
+}
+
+.opcao-menu-lateral > li {
+    display: none;
+}
