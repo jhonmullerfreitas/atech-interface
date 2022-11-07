@@ -1,13 +1,27 @@
+import "./styles.css"
+import Frango from "../../assets/frango.jpg"
+import Ovos from "../../assets/ovos.jpg"
 
+import { useNavigate } from "react-router-dom"
 
-const Home = () => {
+const HomeComponent = () => {
 
+    const navigate = useNavigate();
 
     return(
-        <>
-            <p>Home Componente</p>
-        </>
+        <div className="container-homeComponent">
+            <p className="texto-home">Monitore sua produção com dados importantes para tomada de decisões.</p>
+            <p className="texto-home">O melhor do aviário com o auxílio da tecnologia.</p>
+            <div className="box-ovo-frango">
+                <img className="ovos" src={Ovos} alt="imagem de ovos em uma cartela" />
+                <img className="frango" src={Frango} alt="imagem de um frango olhando para a câmera" />
+            </div>
+            <button className="minhaGranja" onClick={()=> navigate('/resumo')} >
+                Minha Granja
+            </button>
+
+        </div>
     )
 }
 
-export default Home;
+export default HomeComponent;
