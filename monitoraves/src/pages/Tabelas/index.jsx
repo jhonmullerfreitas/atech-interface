@@ -1,4 +1,5 @@
 import BasePage from "../../components/BasePageComponent"
+import TabelasComponent from "../../components/TabelasComponent";
 import "./styles.css"
 
 const Tabelas = () =>{
@@ -6,7 +7,7 @@ const Tabelas = () =>{
     return(
         <>
             <BasePage>
-                <p>Tabelas</p>
+                <TabelasComponent/>
             </BasePage>
         </>
     )
