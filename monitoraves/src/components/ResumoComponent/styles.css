@@ -10,7 +10,7 @@
 .titulo-secao{
     font-size: 20px;
     font-weight: bold;
-    color: #919974;
+    color: #656b4e;
 }
 
 .total-lote{grid-area: total-lote;}
@@ -29,31 +29,75 @@
 .box-info-granja{
     display: grid;
 
+    justify-content: space-evenly;
+    align-items: center;
     grid-template-areas: 
     "total-lote gdark total-aves"
     "percent-masc gsemi-dark total-fem"
     "percent-fem gauto total-masc"
     ;
 
-
-    gap: 1;
-    
-    height: 30vh;
-    width: 90vw;
-
-    
+    height: 35vh;
+    width: 95vw;
 }
 
 .info-granja{
-
     height: 10vh;
     width: 30vw;
 
-    border: 1px solid #919979;
+    border: 1px solid #656b4e;
     background-color: transparent;
 
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    color:#919979;
+
+    color: #656b4e;
+}
+
+@media(min-width: 768px){
+
+    .box-info-granja{
+        height: 40vh;
+    }
+
+    .info-granja{
+        height: 12vh;
+    }
+}
+
+@media(min-width: 1024px){
+
+    .secao-resumo{
+        height: 85vh;
+        width: 80vw;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .titulo-secao{
+        width: 16vw;
+
+        margin-top: 20px;
+    }
+
+    .box-info-granja{
+        height: 70vh;
+        width:80vw;
+
+        margin-top: 20px;
+    }
+
+    .info-granja{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        width: 20vw;
+
+        font-size: 20px;
+
+        border: 2px solid;
+    }
+
 }

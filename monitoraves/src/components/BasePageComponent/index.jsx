@@ -22,21 +22,30 @@ const BasePage = ({children}) =>{
             </header>
 
             <nav className="menu-lateral">
-                <ul className="opcao-menu-lateral">
-                    <h5 className="resumo" onClick={()=> navigate("/resumo")} >Resumo</h5>
+                <ul className="opcao-menu-lateral opcao-resumo">
+                    <h5 className="resumo titulo-opcao" onClick={()=> navigate("/resumo")} >Resumo</h5>
                     <li>Informações da granja</li>
                 </ul>
-                <ul className="opcao-menu-lateral">
-                    <h5 className="lotes" onClick={()=> navigate("/lotes")} >Lotes</h5>
-                    <li>Informações da granja</li>
+                <ul className="opcao-menu-lateral opcao-lotes">
+                    <h5 className="lotes titulo-opcao" onClick={()=> navigate("/lotes")} >Lotes</h5>
+                    <li>Todos os lotes</li>
+                    <li>Listar um lote</li>
                 </ul>
-                <ul className="opcao-menu-lateral">
-                    <h5 className="graficos" onClick={()=> navigate("/graficos")} >Gráficos</h5>
-                    <li>Informações da granja</li>
+                <ul className="opcao-menu-lateral opcao-graficos">
+                    <h5 className="graficos titulo-opcao" onClick={()=> navigate("/graficos")} >Gráficos</h5>
+                    <li>Mortalidade x Lote</li>
+                    <li>Peso x Lote</li>
+                    <li>CA x Lote</li>
+                    <li>Peso Médio x Sexo</li>
+                    <li>Mortalidade Média x Sexo</li>
                 </ul>
-                <ul className="opcao-menu-lateral">
-                    <h5 className="tabelas" onClick={()=> navigate("/tabelas")} >Tabelas</h5>
-                    <li>Informações da granja</li>
+                <ul className="opcao-menu-lateral opcao-tabelas">
+                    <h5 className="tabelas titulo-opcao" onClick={()=> navigate("/tabelas")} >Tabelas</h5>
+                    <li>Mortalidade x Lote</li>
+                    <li>Peso x Lote</li>
+                    <li>CA x Lote</li>
+                    <li>Peso Médio x Sexo</li>
+                    <li>Mortalidade Média x Sexo</li>
                 </ul>
             </nav>
 

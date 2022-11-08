@@ -16,7 +16,7 @@ const HomeComponent = () => {
                 <img className="ovos" src={Ovos} alt="imagem de ovos em uma cartela" />
                 <img className="frango" src={Frango} alt="imagem de um frango olhando para a câmera" />
             </div>
-            <button className="minhaGranja" onClick={()=> navigate('/resumo')} data-aos="fade-up" >
+            <button className="minhaGranja" onClick={()=> navigate('/resumo')} >
                 Minha Granja
             </button>
         </div>

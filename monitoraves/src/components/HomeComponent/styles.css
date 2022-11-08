@@ -6,24 +6,16 @@
     align-items:center;
 
     height: 70vh;
-
-    
 }
 
-
 .texto-home{
-
     width: 70vw;
     text-align: left;
     
-
-    font-family: 'Roboto';
     font-size: 18;
     font-weight: bold;
-    color: #919974;
+    color: #656b4e;
 }
-
-
 
 .ovos{
     position: relative;
@@ -42,15 +34,64 @@
 }
 
 .minhaGranja{
-
-    
-
     height: 5vh;
     width: 30vw;
 
     margin-bottom: 10px;
 
     border: 1px solid transparent;
-    background-color: #919974;
+
+    font-weight: bold;
     color: #F5E7CC;
+    background-color: #656b4e;
+}
+
+@media(min-width: 768px){
+
+
+    .texto-home{
+        font-size: 20px;
+        
+    }
+
+    .ovos, .frango{
+        width: 25vw;
+    }
+
+    .minhaGranja{
+        width: 20vw;
+        height: 9vh;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .container-homeComponent{
+        width: 80vw;
+        height: 90vh;
+    }
+
+    .texto-home{
+        width: 50vw;
+    }
+
+    .ovos{
+        height: 40vh;
+    }
+
+    .frango{
+        height: 40vh;
+    }
+
+    .minhaGranja{
+        font-size: 20px;
+    }
+
+    .minhaGranja:hover{
+        cursor: pointer;
+        color: #656b4e;
+        border: 1px solid #656b4e;
+        background-color: #F5E7CC;
+    }
+
 }

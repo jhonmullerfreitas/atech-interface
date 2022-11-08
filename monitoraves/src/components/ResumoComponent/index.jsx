@@ -5,9 +5,9 @@ const ResumoComponent = () =>{
 
     return(
         <div className="secao-resumo">
-            <p className="titulo-secao" data-aos="fade-down" >Informações da Granja</p>
+            <p className="titulo-secao" data-aos="fade-up" >Informações da Granja</p>
 
-            <div className="box-info-granja" data-aos="fade-down">
+            <div className="box-info-granja" data-aos="fade-up">
                 <div className="info-granja total-lote">Informação aqui</div>
                 <div className="info-granja percent-masc">Informação aqui</div>
                 <div className="info-granja percent-fem">Informação aqui</div>
