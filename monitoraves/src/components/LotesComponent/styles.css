@@ -1,0 +1,54 @@
+
+.secao-lotes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 55vh;
+}
+
+.titulo-section{
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #919974;
+}
+
+.todos-lotes{grid-area: todos-lotes;}
+.consultar{grid-area: consultar;}
+.feminino{grid-area: feminino;}
+.masculino{grid-area: masculino;}
+.dark{grid-area: gdark;}
+.semi-dark{grid-area: gsemi-dark;}
+.automatizado{grid-area: gautomatizado;}
+
+.box-opcao-lote{
+    display: grid;
+
+    grid-template-areas: 
+    "todos-lotes consultar"
+    "feminino masculino"
+    "gdark gsemi-dark"
+    "gautomatizado gautomatizado"
+    ;
+
+
+    gap: 1;
+    
+    height: 41vh;
+    width: 81vw;
+}
+
+.opcao-lote{
+
+    height: 10vh;
+    width: 40vw;
+
+    border: 1px solid #F5E7CC;
+    background-color: #919979;
+
+    font-size: 16px;
+    font-weight: bold;
+    color:#F5E7CC;
+}
