@@ -1,4 +1,5 @@
 import BasePage from "../../components/BasePageComponent"
+import GraficosComponent from "../../components/GraficosComponent";
 
 
 const Graficos = () =>{
@@ -6,7 +7,7 @@ const Graficos = () =>{
     return(
         <>
             <BasePage>
-                <p>Gráficos</p>
+                <GraficosComponent/>
             </BasePage>
         </>
     )
