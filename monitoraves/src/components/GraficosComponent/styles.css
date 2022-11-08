@@ -1,5 +1,5 @@
 
-.secao-lotes{
+.secao-graficos{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,38 +8,35 @@
     height: 55vh;
 }
 
-.titulo-section{
+
+.titulo-secao{
     font-size: 20px;
     font-weight: bold;
     color: #919974;
 }
 
-.todos-lotes{grid-area: todos-lotes;}
-.consultar{grid-area: consultar;}
-.feminino{grid-area: feminino;}
-.masculino{grid-area: masculino;}
-.dark{grid-area: gdark;}
-.semi-dark{grid-area: gsemi-dark;}
-.automatizado{grid-area: gautomatizado;}
+.morte-lote{grid-area: morte-lote;}
+.peso-lote{grid-area: peso-lote;}
+.ca-lote{grid-area: ca-lote;}
+.peso-sexo{grid-area: peso-sexo;}
+.morte-sexo{grid-area: morte-sexo;}
 
-.box-opcao-lote{
+.box-opcao-grafico{
     display: grid;
 
     grid-template-areas: 
-    "todos-lotes consultar"
-    "feminino masculino"
-    "gdark gsemi-dark"
-    "gautomatizado gautomatizado"
+    "morte-lote peso-lote"
+    "ca-lote peso-sexo"
+    "morte-sexo morte-sexo" 
     ;
-
 
     gap: 1;
     
-    height: 41vh;
+    height: 30vh;
     width: 81vw;
 }
 
-.opcao-lote{
+.opcao-grafico{
 
     height: 10vh;
     width: 40vw;
