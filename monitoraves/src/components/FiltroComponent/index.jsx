@@ -1,13 +1,17 @@
 import "./styles.css"
 import Lupa from "../../assets/lupa.png"
+import { useSelector } from "react-redux"
 
-const FiltroComponent = ({tituloSecao, nomeGrafico}) => {
+
+const FiltroComponent = () => {
+
+    const tituloSecao = useSelector((store) => store.nomeSecao)
+    const nomeFiltro = useSelector((store) => store.tipoFiltro)
 
     return(
         <div className="secao-filtro" data-aos="fade-up">
 
-            {/* {tituloSecao} */}
-            <p className="titulo-secao">Titulo Secao</p> 
+            <p className="titulo-secao">{tituloSecao}</p> 
 
             <div className="busca-filtro">
                 <div className="busca">
@@ -19,14 +23,7 @@ const FiltroComponent = ({tituloSecao, nomeGrafico}) => {
 
                 </div>
 
-                {/* Select com as opções de gráficos */}
-                <select className="grafico-escolha" name="grafico-escolha" id="grafico">
-                    <option value="morte-lote">Morte x Lote</option>
-                    <option value="peso-lote">Peso x Lote</option>
-                    <option value="ca-lote">CA x Lote</option>
-                    <option value="peso-medio">Peso Médio x Sexo</option>
-                    <option value="morte-media">Morte Média x Sexo</option>
-                </select>
+                <p className="grafico-escolha">{nomeFiltro}</p>
                 
             </div>
 
