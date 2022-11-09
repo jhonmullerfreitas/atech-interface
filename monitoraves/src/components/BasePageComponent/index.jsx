@@ -24,7 +24,7 @@ const BasePage = ({children}) =>{
             <nav className="menu-lateral">
                 <ul className="opcao-menu-lateral opcao-resumo">
                     <h5 className="resumo titulo-opcao" onClick={()=> navigate("/resumo")} >Resumo</h5>
-                    <li>Informações da granja</li>
+                    <li onClick={()=> navigate("/resumo")}>Informações da granja</li>
                 </ul>
                 <ul className="opcao-menu-lateral opcao-lotes">
                     <h5 className="lotes titulo-opcao" onClick={()=> navigate("/lotes")} >Lotes</h5>
@@ -33,19 +33,19 @@ const BasePage = ({children}) =>{
                 </ul>
                 <ul className="opcao-menu-lateral opcao-graficos">
                     <h5 className="graficos titulo-opcao" onClick={()=> navigate("/graficos")} >Gráficos</h5>
-                    <li>Mortalidade x Lote</li>
-                    <li>Peso x Lote</li>
-                    <li>CA x Lote</li>
-                    <li>Peso Médio x Sexo</li>
-                    <li>Mortalidade Média x Sexo</li>
+                    <li onClick={() => navigate("/filtro/mortalidadexlote")} >Mortalidade x Lote</li>
+                    <li onClick={() => navigate("/filtro/pesoxlote")}>Peso x Lote</li>
+                    <li onClick={() => navigate("/filtro/caxlote")}>CA x Lote</li>
+                    <li onClick={() => navigate("/filtro/pmedioxsexo")}>Peso Médio x Sexo</li>
+                    <li onClick={() => navigate("/filtro/mortemediaxsexo")}>Mortalidade Média x Sexo</li>
                 </ul>
                 <ul className="opcao-menu-lateral opcao-tabelas">
                     <h5 className="tabelas titulo-opcao" onClick={()=> navigate("/tabelas")} >Tabelas</h5>
-                    <li>Mortalidade x Lote</li>
-                    <li>Peso x Lote</li>
-                    <li>CA x Lote</li>
-                    <li>Peso Médio x Sexo</li>
-                    <li>Mortalidade Média x Sexo</li>
+                    <li onClick={() => navigate("/filtro/mortalidadexlote")} >Mortalidade x Lote</li>
+                    <li onClick={() => navigate("/filtro/pesoxlote")}>Peso x Lote</li>
+                    <li onClick={() => navigate("/filtro/caxlote")}>CA x Lote</li>
+                    <li onClick={() => navigate("/filtro/pmedioxsexo")}>Peso Médio x Sexo</li>
+                    <li onClick={() => navigate("/filtro/mortemediaxsexo")}>Mortalidade Média x Sexo</li>
                 </ul>
             </nav>
 
