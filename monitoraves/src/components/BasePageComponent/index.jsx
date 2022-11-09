@@ -3,10 +3,28 @@ import LogoMonitoraves from "../../assets/LogoLogoMonitoraves.png"
 import MinhaConta from "../../assets/MinhaConta.png"
 import { useNavigate } from "react-router-dom"
 
+import {useDispatch} from "react-redux"
+import { alterNomeGrafico, alterNomeTabela } from "../../store/modules/nomeSecao/actions"
+import { tipoGraficoEscolhido } from "../../store/modules/tipoFiltro/actions"
+
 const BasePage = ({children}) =>{
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
+    const opcaoEscolhidaGrafico = (tipoGrafico) =>{
+
+        navigate(`/filtro/${tipoGrafico}`)
+        dispatch(alterNomeGrafico("Gráficos"))
+        dispatch(tipoGraficoEscolhido(tipoGrafico))
+    }
+
+    const opcaoEscolhidaTabelas = (tipoTabela) =>{
+
+        navigate(`/filtro/${tipoTabela}`)
+        dispatch(alterNomeTabela("Tabelas"))
+        dispatch(tipoGraficoEscolhido(tipoTabela))
+    }
 
     return(
         <div className="container-basepage">
@@ -33,19 +51,19 @@ const BasePage = ({children}) =>{
                 </ul>
                 <ul className="opcao-menu-lateral opcao-graficos">
                     <h5 className="graficos titulo-opcao" onClick={()=> navigate("/graficos")} >Gráficos</h5>
-                    <li onClick={() => navigate("/filtro/mortalidadexlote")} >Mortalidade x Lote</li>
-                    <li onClick={() => navigate("/filtro/pesoxlote")}>Peso x Lote</li>
-                    <li onClick={() => navigate("/filtro/caxlote")}>CA x Lote</li>
-                    <li onClick={() => navigate("/filtro/pmedioxsexo")}>Peso Médio x Sexo</li>
-                    <li onClick={() => navigate("/filtro/mortemediaxsexo")}>Mortalidade Média x Sexo</li>
+                    <li onClick={() => opcaoEscolhidaGrafico("mortalidadexlote")} >Mortalidade x Lote</li>
+                    <li onClick={() => opcaoEscolhidaGrafico("pesoxlote")}>Peso x Lote</li>
+                    <li onClick={() => opcaoEscolhidaGrafico("caxlote")}>CA x Lote</li>
+                    <li onClick={() => opcaoEscolhidaGrafico("pmedioxsexo")}>Peso Médio x Sexo</li>
+                    <li onClick={() => opcaoEscolhidaGrafico("mortemediaxsexo")}>Mortalidade Média x Sexo</li>
                 </ul>
                 <ul className="opcao-menu-lateral opcao-tabelas">
                     <h5 className="tabelas titulo-opcao" onClick={()=> navigate("/tabelas")} >Tabelas</h5>
-                    <li onClick={() => navigate("/filtro/mortalidadexlote")} >Mortalidade x Lote</li>
-                    <li onClick={() => navigate("/filtro/pesoxlote")}>Peso x Lote</li>
-                    <li onClick={() => navigate("/filtro/caxlote")}>CA x Lote</li>
-                    <li onClick={() => navigate("/filtro/pmedioxsexo")}>Peso Médio x Sexo</li>
-                    <li onClick={() => navigate("/filtro/mortemediaxsexo")}>Mortalidade Média x Sexo</li>
+                    <li onClick={() => opcaoEscolhidaTabelas("mortalidadexlote")} >Mortalidade x Lote</li>
+                    <li onClick={() => opcaoEscolhidaTabelas("pesoxlote")}>Peso x Lote</li>
+                    <li onClick={() => opcaoEscolhidaTabelas("caxlote")}>CA x Lote</li>
+                    <li onClick={() => opcaoEscolhidaTabelas("pmedioxsexo")}>Peso Médio x Sexo</li>
+                    <li onClick={() => opcaoEscolhidaTabelas("mortemediaxsexo")}>Mortalidade Média x Sexo</li>
                 </ul>
             </nav>
 
