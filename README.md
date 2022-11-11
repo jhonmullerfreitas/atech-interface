@@ -2,7 +2,7 @@
 
 ## 💻 Sobre
 
-API para o monitoramento de granja.
+App Web para o monitoramento de granja.
 
 ### Clone o repositório
 
