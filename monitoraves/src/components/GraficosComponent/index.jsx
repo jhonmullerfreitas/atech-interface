@@ -3,20 +3,38 @@ import Grafico from "../../assets/grafico.jpg"
 
 import { alterNomeGrafico } from "../../store/modules/nomeSecao/actions"
 import { tipoGraficoEscolhido } from "../../store/modules/tipoFiltro/actions"
+import { pesoMedioSexo } from "../../store/modules/pesoMedioSexo/actions"
+import { morteMediaSexo } from "../../store/modules/morteMediaSexo/actions"
 
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import { useState, useEffect } from "react"
 
+import axios from "axios"
 
 const GraficosComponent = () =>{
+
+    const [pesoMedioSexoResponse, setPesoMedioSexoResponse] = useState([])
+    const [morteMediaSexoResponse, setMorteMediaSexoResponse] = useState([])
+    
+
+    useEffect(()=>{
+        axios.get("http://localhost:3001/peso-medio-sexo/")
+        .then((response) => setPesoMedioSexoResponse(response.data))
+
+        axios.get("http://localhost:3001/morte-media-sexo/")
+        .then((response) => setMorteMediaSexoResponse(response.data))
+    },[])
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const opcaoEscolhida = (tipoGrafico) => {
-        navigate(`/filtro/${tipoGrafico}`)
+        dispatch(morteMediaSexo(morteMediaSexoResponse))
+        dispatch(pesoMedioSexo(pesoMedioSexoResponse))
         dispatch(alterNomeGrafico("Gráficos"))
         dispatch(tipoGraficoEscolhido(tipoGrafico))
+        navigate(`/filtro/${tipoGrafico}`)
     }
 
     return(

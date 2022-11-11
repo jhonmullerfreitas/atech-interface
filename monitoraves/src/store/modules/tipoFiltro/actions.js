@@ -22,24 +22,3 @@ export const tipoGraficoEscolhido = (nomeGrafico) => {
                 
     return {type: "@tipoFiltro/MORTEMEDIAXSEXO", tipo: "Mortalidade x Lote"}
 } 
-
-
-
-// export const tipoMorteLote = (nomeGrafico) => (
-//     {type: "@tipoFiltro/MORTEXLOTE", tipo: nomeGrafico}
-// )
-
-// export const tipoPesoLote = (nomeGrafico) => (
-//     {type: "@tipoFiltro/PESOXLOTE", tipo: nomeGrafico}
-// )
-
-// export const tipoCaLote = (nomeGrafico) => (
-//     {type: "@tipoFiltro/CAXLOTE", tipo: nomeGrafico}
-// )
-// export const tipoPesoMedioSexo = (nomeGrafico) => (
-//     {type: "@tipoFiltro/PESOMEDIOXSEXO", tipo: nomeGrafico}
-// )
-// export const tipoMorteMediaSexo = (nomeGrafico) => (
-//     {type: "@tipoFiltro/MORTEMEDIAXSEXO", tipo: nomeGrafico}
-// )
-

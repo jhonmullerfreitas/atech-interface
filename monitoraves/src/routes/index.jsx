@@ -9,6 +9,7 @@ import PesoxLote from "../pages/PesoxLote";
 import CaxLote from "../pages/CaxLote";
 import PMedioxSexo from "../pages/PMedioxSexo";
 import MorteMediaxSexo from "../pages/MorteMediaxSexo";
+import InfoLotes from "../pages/InfoLotes";
 
 const Routes = () => {
 
@@ -25,6 +26,8 @@ const Routes = () => {
             <Route exact path="/filtro/caxlote" element={<CaxLote/>} />
             <Route exact path="/filtro/pmedioxsexo" element={<PMedioxSexo/>} />
             <Route exact path="/filtro/mortemediaxsexo" element={<MorteMediaxSexo/>} />
+
+            <Route exact path="/lotes/infolote" element={<InfoLotes/>} />
 
         </Switch>
     );
