@@ -6,6 +6,9 @@ import axios from "axios"
 import ImgGrafico from "../ImgGrafico"
 import PesoMedioGrafico from "../GraficoPesoMedio"
 import MorteMediaGrafico from "../GraficoMorteMedia"
+import TabelaPesoMedio from "../TabelaPesoMedio"
+import TabelaMorteMedia from "../TabelaMorteMedia"
+import ImgTabela from "../ImgTabela"
 
 const FiltroComponent = () => {
 
@@ -71,17 +74,30 @@ const FiltroComponent = () => {
 
                 <div className="espaco-vazio">
                     {
-                        nomeFiltro === "Mortalidade x Lote" ?
-                        <ImgGrafico tipo={nomeFiltro} infoX={mortalidade[2]} infoY={mortalidade[3]}/>:
-                        nomeFiltro === "Peso x Lote" ?
-                        <ImgGrafico tipo={nomeFiltro} infoX={pesos[2]} infoY={pesos[3]}/> :
-                        nomeFiltro === "CA x Lote" ?
-                        <ImgGrafico tipo={nomeFiltro} infoX={ca[2]} infoY={ca[3]}/> :
-                        nomeFiltro === "Peso Médio x Sexo" ?
-                        <PesoMedioGrafico/> :
-                        nomeFiltro === "Morte Média x Sexo" ?
-                        <MorteMediaGrafico/> :
-                        <p>Sem informação</p>
+                        tituloSecao === "Tabelas" ? 
+                        ( 
+                            nomeFiltro==="Peso Médio x Sexo" ? <TabelaPesoMedio/> : 
+                            nomeFiltro==="Morte Média x Sexo" ? <TabelaMorteMedia/>:
+                            nomeFiltro==="Mortalidade x Lote" ? <ImgTabela datas={mortalidade[3]}  valores={mortalidade[2]} filtro={"Mortes"}/>:
+                            nomeFiltro==="Peso x Lote" ? <ImgTabela datas={pesos[3]}  valores={pesos[2]} filtro={"Peso"}/> :
+                            <ImgTabela datas={ca[3]}  valores={ca[2]} filtro={"CA"}/>
+                        ) 
+                        :
+                        <>
+                            {
+                                nomeFiltro === "Mortalidade x Lote" ?
+                                <ImgGrafico tipo={nomeFiltro} infoX={mortalidade[2]} infoY={mortalidade[3]}/>:
+                                nomeFiltro === "Peso x Lote" ?
+                                <ImgGrafico tipo={nomeFiltro} infoX={pesos[2]} infoY={pesos[3]}/> :
+                                nomeFiltro === "CA x Lote" ?
+                                <ImgGrafico tipo={nomeFiltro} infoX={ca[2]} infoY={ca[3]}/> :
+                                nomeFiltro === "Peso Médio x Sexo" ?
+                                <PesoMedioGrafico/> :
+                                nomeFiltro === "Morte Média x Sexo" ?
+                                <MorteMediaGrafico/> :
+                                <p>Sem informação</p>
+                            }
+                        </>
                     }
                 </div>
 
