@@ -1,0 +1,1 @@
+export const morteMediaSexo = (data) => ({type: "@morteMedia/ADD", dados: data})

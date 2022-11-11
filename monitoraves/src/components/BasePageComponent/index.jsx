@@ -1,22 +1,50 @@
 import "./styles.css"
 import LogoMonitoraves from "../../assets/LogoLogoMonitoraves.png"
 import MinhaConta from "../../assets/MinhaConta.png"
-import { useNavigate } from "react-router-dom"
 
+import { useNavigate } from "react-router-dom"
 import {useDispatch} from "react-redux"
+import { useState, useEffect } from "react"
+
 import { alterNomeGrafico, alterNomeTabela } from "../../store/modules/nomeSecao/actions"
 import { tipoGraficoEscolhido } from "../../store/modules/tipoFiltro/actions"
+import { tipoLoteEscolhido } from "../../store/modules/lotes/actions"
+import { pesoMedioSexo } from "../../store/modules/pesoMedioSexo/actions"
+import { morteMediaSexo } from "../../store/modules/morteMediaSexo/actions"
+
+import axios from "axios"
 
 const BasePage = ({children}) =>{
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    const opcaoEscolhidaGrafico = (tipoGrafico) =>{
+    const [pesoMedioSexoResponse, setPesoMedioSexoResponse] = useState([])
+    const [morteMediaSexoResponse, setMorteMediaSexoResponse] = useState([])
+    const [lotes, setLotes] = useState([])
 
-        navigate(`/filtro/${tipoGrafico}`)
+    useEffect(()=>{
+        axios.get("http://localhost:3001/lotes/")
+        .then((response) => setLotes(response.data))
+    },[])
+
+    useEffect(()=>{
+        axios.get("http://localhost:3001/peso-medio-sexo/")
+        .then((response) => setPesoMedioSexoResponse(response.data))
+    },[])
+
+    useEffect(()=>{
+        axios.get("http://localhost:3001/morte-media-sexo/")
+        .then((response) => setMorteMediaSexoResponse(response.data))
+        
+    },[])
+
+    const opcaoEscolhidaGrafico = (tipoGrafico) =>{
+        dispatch(morteMediaSexo(morteMediaSexoResponse))
+        dispatch(pesoMedioSexo(pesoMedioSexoResponse))
         dispatch(alterNomeGrafico("Gráficos"))
         dispatch(tipoGraficoEscolhido(tipoGrafico))
+        navigate(`/filtro/${tipoGrafico}`)
     }
 
     const opcaoEscolhidaTabelas = (tipoTabela) =>{
@@ -24,6 +52,11 @@ const BasePage = ({children}) =>{
         navigate(`/filtro/${tipoTabela}`)
         dispatch(alterNomeTabela("Tabelas"))
         dispatch(tipoGraficoEscolhido(tipoTabela))
+    }
+
+    const listarTodosOsLotes = (tipoLote) =>{
+        dispatch(tipoLoteEscolhido({tipo: tipoLote, lotesData: lotes}))
+        navigate("/lotes/infolote")
     }
 
     return(
@@ -46,7 +79,7 @@ const BasePage = ({children}) =>{
                 </ul>
                 <ul className="opcao-menu-lateral opcao-lotes">
                     <h5 className="lotes titulo-opcao" onClick={()=> navigate("/lotes")} >Lotes</h5>
-                    <li>Todos os lotes</li>
+                    <li onClick={()=> listarTodosOsLotes("TODOSLOTES") } >Todos os lotes</li>
                     <li>Listar um lote</li>
                 </ul>
                 <ul className="opcao-menu-lateral opcao-graficos">
