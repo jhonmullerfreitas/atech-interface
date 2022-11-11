@@ -36,7 +36,6 @@ const BasePage = ({children}) =>{
     useEffect(()=>{
         axios.get("http://localhost:3001/morte-media-sexo/")
         .then((response) => setMorteMediaSexoResponse(response.data))
-        
     },[])
 
     const opcaoEscolhidaGrafico = (tipoGrafico) =>{
@@ -49,6 +48,8 @@ const BasePage = ({children}) =>{
 
     const opcaoEscolhidaTabelas = (tipoTabela) =>{
 
+        dispatch(pesoMedioSexo(pesoMedioSexoResponse))
+        dispatch(morteMediaSexo(morteMediaSexoResponse))
         navigate(`/filtro/${tipoTabela}`)
         dispatch(alterNomeTabela("Tabelas"))
         dispatch(tipoGraficoEscolhido(tipoTabela))
