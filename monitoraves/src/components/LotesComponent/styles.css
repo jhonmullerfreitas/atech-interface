@@ -1,0 +1,117 @@
+
+.secao-lotes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 55vh;
+}
+
+.titulo-section{
+    font-size: 20px;
+    font-weight: bold;
+    /* color: #919974; */
+    color: #656b4e;
+}
+
+.galinhas{grid-area: galinhas;}
+.todos-lotes{grid-area: todos-lotes;}
+.consultar{grid-area: consultar;}
+.feminino{grid-area: feminino;}
+.masculino{grid-area: masculino;}
+.dark{grid-area: gdark;}
+.semi-dark{grid-area: gsemi-dark;}
+.automatizado{grid-area: gautomatizado;}
+
+.box-opcao-lote{
+    display: grid;
+
+    grid-template-areas: 
+    "todos-lotes consultar"
+    "feminino masculino"
+    "gdark gsemi-dark"
+    "gautomatizado gautomatizado"
+    ;
+
+
+    gap: 1;
+    
+    height: 41vh;
+    width: 81vw;
+}
+
+.box-opcao-lote-1024{
+    display: none;
+}
+
+.opcao-lote{
+    height: 10vh;
+    width: 40vw;
+
+    border: 1px solid #F5E7CC;
+    background-color: #656b4e;
+
+    font-size: 16px;
+    font-weight: bold;
+    color:#F5E7CC;
+}
+
+@media(min-width: 1024px){
+
+    .secao-lotes{
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        height: 90vh;
+        width: 80vw;
+    }
+
+    .titulo-section{
+        margin-top: 20px;
+    }
+
+    .box-opcao-lote{
+        display: none;
+    }
+
+    .galinhas{
+        
+        height: 42vh;
+        width: 25vw;
+    }
+
+    .box-opcao-lote-1024{
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+    
+        grid-template-areas: 
+        "todos-lotes galinhas consultar"
+        "feminino galinhas masculino"
+        "gdark gautomatizado gsemi-dark"
+        
+        ;
+    
+        gap: 1;
+        
+        height: 75vh;
+        width: 80vw;
+        margin-top: 20px;
+    }
+
+    .opcao-lote{
+        height: 15vh;
+        width: 25vw;
+        border: 1px solid transparent;
+    }
+
+    .opcao-lote:hover{
+        cursor: pointer;
+        border: 1px solid #656b4e;
+        background-color: #F5E7CC;
+        color:#656b4e;
+    }
+
+
+}

@@ -1,0 +1,97 @@
+
+.container-homeComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+
+    height: 70vh;
+}
+
+.texto-home{
+    width: 70vw;
+    text-align: left;
+    
+    font-size: 18;
+    font-weight: bold;
+    color: #656b4e;
+}
+
+.ovos{
+    position: relative;
+    left: 20px;
+    bottom: 15px;
+    height: 20vh;
+    width: 40vw;
+}
+
+.frango{
+    position: relative;
+    right: 20px;
+    top: 10px;
+    height: 20vh;
+    width: 40vw;
+}
+
+.minhaGranja{
+    height: 5vh;
+    width: 30vw;
+
+    margin-bottom: 10px;
+
+    border: 1px solid transparent;
+
+    font-weight: bold;
+    color: #F5E7CC;
+    background-color: #656b4e;
+}
+
+@media(min-width: 768px){
+
+
+    .texto-home{
+        font-size: 20px;
+        
+    }
+
+    .ovos, .frango{
+        width: 25vw;
+    }
+
+    .minhaGranja{
+        width: 20vw;
+        height: 9vh;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .container-homeComponent{
+        width: 80vw;
+        height: 90vh;
+    }
+
+    .texto-home{
+        width: 50vw;
+    }
+
+    .ovos{
+        height: 40vh;
+    }
+
+    .frango{
+        height: 40vh;
+    }
+
+    .minhaGranja{
+        font-size: 20px;
+    }
+
+    .minhaGranja:hover{
+        cursor: pointer;
+        color: #656b4e;
+        border: 1px solid #656b4e;
+        background-color: #F5E7CC;
+    }
+
+}

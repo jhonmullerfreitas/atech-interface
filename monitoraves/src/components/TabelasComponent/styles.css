@@ -1,0 +1,105 @@
+
+.secao-tabelas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 55vh;
+}
+
+
+.titulo-secao{
+    font-size: 20px;
+    font-weight: bold;
+    
+    color: #656b4e;
+}
+
+.morte-lote{grid-area: morte-lote;}
+.peso-lote{grid-area: peso-lote;}
+.ca-lote{grid-area: ca-lote;}
+.peso-sexo{grid-area: peso-sexo;}
+.morte-sexo{grid-area: morte-sexo;}
+
+.box-opcao-tabela{
+    display: grid;
+
+    grid-template-areas: 
+    "morte-lote peso-lote"
+    "ca-lote peso-sexo"
+    "morte-sexo morte-sexo" 
+    ;
+
+    gap: 1;
+    
+    height: 30vh;
+    width: 81vw;
+}
+.box-opcao-tabela-1024{
+    display: none;
+}
+
+.opcao-tabela{
+    height: 10vh;
+    width: 40vw;
+
+    border: 1px solid #F5E7CC;
+    background-color: #656b4e;
+
+    font-size: 16px;
+    font-weight: bold;
+    color:#F5E7CC;
+}
+
+@media(min-width: 1024px){
+
+    .box-opcao-tabela{
+        display: none;
+    }
+
+    .secao-tabelas{
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        height: 90vh;
+        width: 80vw;
+    }
+
+    .tabela-1024{
+        height: 42vh;
+        width: 48vw;
+    }
+
+    .tabela-1024{grid-area: tabela;}
+    .box-opcao-tabela-1024{
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+
+    
+        grid-template-areas: 
+        "morte-lote tabela tabela"
+        "peso-lote tabela tabela"
+        "ca-lote peso-sexo morte-sexo" 
+        ;
+    
+        height: 75vh;
+        width: 80vw;
+        margin-top: 20px;
+    }
+
+    .opcao-tabela{
+        height: 15vh;
+        width: 20vw;
+        font-size: 18px;
+    }
+
+    .opcao-tabela:hover{
+        cursor: pointer;
+        border: 1px solid #656b4e;
+        background-color: #F5E7CC;
+        color:#656b4e;
+    }
+
+}

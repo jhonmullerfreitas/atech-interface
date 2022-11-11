@@ -1,0 +1,1 @@
+export const mudaId = (id) => ({type: "@mudaId/MUDAR", id: id})

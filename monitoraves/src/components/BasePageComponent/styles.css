@@ -1,0 +1,201 @@
+.container-basepage{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5E7CC;
+}
+
+.cabecalho{
+    height: 10vh;
+    width: 100vw;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FFBA7C;
+}
+
+.logoMonitorave{
+    height: 8vh;
+    width: 20vw;
+}
+
+.menu-cabecalho{
+    display: flex;
+    justify-content: space-between;
+    width: 55vw;
+
+    list-style: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    color:#7C8046;
+}
+
+.minhaConta{
+    height: 4vh;
+    width: 17vw;
+}
+
+
+.resumo { grid-area: resumo; }
+.lotes { grid-area: lotes; }
+.graficos { grid-area: graficos; }
+.tabelas { grid-area: tabelas; }
+
+.menu-lateral{
+    display: grid;
+    grid-template-areas: 
+    "resumo lotes"
+    "graficos tabelas" 
+    ;
+    
+    height: 20vh;
+    width: 100vw;
+
+    font-size: 20px;
+
+    background-color: #656b4e;
+}
+
+.opcao-menu-lateral{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10vh;
+
+    border: 1px solid #F5E7CC;
+    
+    color: #F5E7CC; 
+}
+
+.opcao-menu-lateral > li {
+    display: none;
+}
+
+@media(min-width: 425px){
+
+    .minhaConta{
+        height: 5vh;
+        width: 13vw;
+    }
+}
+
+@media(min-width: 768px){
+    .logoMonitorave{
+        width: 15vw;
+    }
+
+    .menu-cabecalho{
+        font-size: 18px;
+    }
+
+    .minhaConta{
+        height: 5vh;
+        width: 10vw;
+        margin-right: 10px;
+    }
+}
+
+@media(min-width: 1024px){
+
+    .cabecalho { grid-area: cabecalho; }
+    .menu-lateral { grid-area: menu-lateral; }
+    .conteudo { grid-area: conteudo; }
+
+    .container-basepage{
+
+        height: 100vh;
+        width: 100vw;
+
+        display: grid;
+        grid-template-areas: 
+        "cabecalho cabecalho"
+        "menu-lateral conteudo"
+        ;
+    }
+
+    .cabecalho{
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    .logoMonitorave{
+        width: 10vw;
+    }
+
+    .logoMonitorave:hover{
+        cursor: pointer;
+    }
+
+    .menu-cabecalho{
+        font-size: 20px;
+        width: 35vw;
+    }
+
+    .menu-cabecalho >li:hover{
+        cursor: pointer;
+        color:#656b4e;
+    }
+
+    .minhaConta{
+        height: 5vh;
+        width: 5vw;
+        margin-right: 10px;
+    }
+
+    .minhaConta:hover{
+        cursor: pointer;
+    }
+
+    .menu-lateral{
+
+        height: 90vh;
+        width: 18vw;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opcao-menu-lateral{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-left: 10px;
+        border: 0;
+    }
+
+    .opcao-graficos{
+        height: 24vh;
+    }
+
+    .opcao-tabelas{
+        height: 22vh;
+    }
+
+    .titulo-opcao{
+        margin-bottom: 5px;
+    }
+
+    .titulo-opcao:hover{
+        cursor: pointer;
+        color: #FFBA7C;
+        
+    }
+
+    .opcao-menu-lateral > li{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .opcao-menu-lateral > li:hover{
+        cursor: pointer;
+        color: #FFBA7C;
+    }
+}
