@@ -10,6 +10,7 @@ import CaxLote from "../pages/CaxLote";
 import PMedioxSexo from "../pages/PMedioxSexo";
 import MorteMediaxSexo from "../pages/MorteMediaxSexo";
 import InfoLotes from "../pages/InfoLotes";
+import ConsultaLote from "../pages/consultaLote";
 
 const Routes = () => {
 
@@ -20,6 +21,7 @@ const Routes = () => {
             <Route exact path="/lotes" element={<Lotes/>} />
             <Route exact path="/tabelas" element={<Tabelas/>} />
             <Route exact path="/resumo" element={<Resumo/>} />
+            <Route exact path="/consulta-lote" element={<ConsultaLote/>} />
 
             <Route exact path="/filtro/mortalidadexlote" element={<MortalidadexLote/>} />
             <Route exact path="/filtro/pesoxlote" element={<PesoxLote/>} />

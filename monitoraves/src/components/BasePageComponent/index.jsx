@@ -81,7 +81,7 @@ const BasePage = ({children}) =>{
                 <ul className="opcao-menu-lateral opcao-lotes">
                     <h5 className="lotes titulo-opcao" onClick={()=> navigate("/lotes")} >Lotes</h5>
                     <li onClick={()=> listarTodosOsLotes("TODOSLOTES") } >Todos os lotes</li>
-                    <li>Listar um lote</li>
+                    <li onClick={() => navigate("/consulta-lote")}>Listar um lote</li>
                 </ul>
                 <ul className="opcao-menu-lateral opcao-graficos">
                     <h5 className="graficos titulo-opcao" onClick={()=> navigate("/graficos")} >Gráficos</h5>
