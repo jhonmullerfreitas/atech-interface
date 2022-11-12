@@ -1,10 +1,13 @@
 import "./styles.css"
 import Galinhas from "../../assets/galinhas.jpg"
-import { tipoLoteEscolhido } from "../../store/modules/lotes/actions"
+
+import { useState, useEffect } from "react"
 import {useDispatch} from "react-redux"
 import { useNavigate } from "react-router-dom"
+
 import axios from "axios"
-import { useState, useEffect } from "react"
+
+import { tipoLoteEscolhido } from "../../store/modules/lotes/actions"
 
 const LotesComponent = () =>{
 
@@ -14,7 +17,6 @@ const LotesComponent = () =>{
         axios.get("http://localhost:3001/lotes/")
         .then((response) => setLotes(response.data))
     },[])
-
 
     const dispatch = useDispatch()
     const navigate = useNavigate()

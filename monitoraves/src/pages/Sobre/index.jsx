@@ -1,14 +1,14 @@
 import BasePage from "../../components/BasePageComponent"
-import FiltroComponent from "../../components/FiltroComponent"
+import SobreComponent from "../../components/SobreComponent";
 
-const PesoxLote = () =>{
+const Sobre = () =>{
     return(
         <>
             <BasePage>
-                <FiltroComponent/>
+                <SobreComponent/>
             </BasePage>
         </>
     )
 }
 
-export default PesoxLote;
+export default Sobre;

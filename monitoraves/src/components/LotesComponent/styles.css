@@ -4,14 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-
     height: 55vh;
 }
 
 .titulo-section{
     font-size: 20px;
     font-weight: bold;
-    /* color: #919974; */
     color: #656b4e;
 }
 
@@ -33,7 +31,6 @@
     "gdark gsemi-dark"
     "gautomatizado gautomatizado"
     ;
-
 
     gap: 1;
     
@@ -58,7 +55,6 @@
 }
 
 @media(min-width: 1024px){
-
     .secao-lotes{
         justify-content: flex-start;
         align-items: flex-start;
@@ -112,6 +108,4 @@
         background-color: #F5E7CC;
         color:#656b4e;
     }
-
-
 }
