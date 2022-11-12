@@ -1,0 +1,51 @@
+
+.container-consulta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 90vh;
+}
+
+.input-listar{
+    height: 5vh;
+    border: 2px solid #656b4e;
+    width: 5vw;
+    padding-left: 5px;
+}
+
+.botao-listar{
+    height: 5vh;
+    color: #F5E7CC;
+    font-weight: bold;
+    width: 5vw;
+    border: 1px solid #656b4e;
+    margin-left: 5px;
+    background-color: #656b4e;
+    border-radius: 10px;
+}
+
+.botao-listar:hover{
+    cursor: pointer;
+    background-color: #F5E7CC;
+    color: #656b4e;
+}
+
+.info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: 60vh;
+        width: 20vw;
+
+        margin-left: 10px;
+        margin-top: 10px;
+
+        font-size: 16px;
+        font-weight: bold;
+        color: #F5E7CC;
+        background-color: #656b4e;
+}

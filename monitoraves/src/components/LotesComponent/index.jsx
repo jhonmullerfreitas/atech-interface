@@ -1,10 +1,13 @@
 import "./styles.css"
 import Galinhas from "../../assets/galinhas.jpg"
-import { tipoLoteEscolhido } from "../../store/modules/lotes/actions"
+
+import { useState, useEffect } from "react"
 import {useDispatch} from "react-redux"
 import { useNavigate } from "react-router-dom"
+
 import axios from "axios"
-import { useState, useEffect } from "react"
+
+import { tipoLoteEscolhido } from "../../store/modules/lotes/actions"
 
 const LotesComponent = () =>{
 
@@ -14,7 +17,6 @@ const LotesComponent = () =>{
         axios.get("http://localhost:3001/lotes/")
         .then((response) => setLotes(response.data))
     },[])
-
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -30,7 +32,7 @@ const LotesComponent = () =>{
 
             <div className="box-opcao-lote">
                 <button className="opcao-lote todos-lotes" data-aos="fade-right" onClick={() => opcaoEscolhida("TODOSLOTES") } >Todos os lotes</button>
-                <button className="opcao-lote consultar" data-aos="fade-left"  >Consultar lote </button>
+                <button className="opcao-lote consultar" data-aos="fade-left" onClick={()=> navigate("/consulta-lote")}  >Consultar lote </button>
                 <button className="opcao-lote feminino" data-aos="fade-right" onClick={() => opcaoEscolhida("FEMININO") } >Sexo Feminino</button>
                 <button className="opcao-lote masculino" data-aos="fade-left" onClick={() => opcaoEscolhida("MASCULINO") } >Sexo Masculino</button>
                 <button className="opcao-lote dark" data-aos="fade-right" onClick={() => opcaoEscolhida("DARK") } >Galpão Dark</button>
@@ -42,7 +44,7 @@ const LotesComponent = () =>{
             <div className="box-opcao-lote-1024" data-aos="fade-up">
                 <img className="galinhas" src={Galinhas} alt="galinhas em um terreiro" />
                 <button className="opcao-lote todos-lotes" onClick={() => opcaoEscolhida("TODOSLOTES") } >Todos os lotes</button>
-                <button className="opcao-lote consultar" >Consultar lote </button>
+                <button className="opcao-lote consultar" onClick={()=> navigate("/consulta-lote")} >Consultar lote </button>
                 <button className="opcao-lote feminino" onClick={() => opcaoEscolhida("FEMININO") } >Sexo Feminino</button>
                 <button className="opcao-lote masculino" onClick={() => opcaoEscolhida("MASCULINO") } >Sexo Masculino</button>
                 <button className="opcao-lote dark" onClick={() => opcaoEscolhida("DARK") } >Galpão Dark</button>

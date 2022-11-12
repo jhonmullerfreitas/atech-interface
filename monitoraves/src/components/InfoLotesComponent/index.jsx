@@ -24,7 +24,6 @@ const InfoLotesComponent = () => {
             </div>
         </div>
     )
-
 }
 
 export default InfoLotesComponent;
