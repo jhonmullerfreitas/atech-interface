@@ -1,8 +1,11 @@
 import "./styles.css"
 import Lupa from "../../assets/lupa.png"
+
 import { useSelector} from "react-redux"
 import {useEffect, useState} from "react"
+
 import axios from "axios"
+
 import ImgGrafico from "../ImgGrafico"
 import PesoMedioGrafico from "../GraficoPesoMedio"
 import MorteMediaGrafico from "../GraficoMorteMedia"

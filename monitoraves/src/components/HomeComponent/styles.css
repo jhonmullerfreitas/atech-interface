@@ -47,8 +47,6 @@
 }
 
 @media(min-width: 768px){
-
-
     .texto-home{
         font-size: 20px;
         
@@ -62,7 +60,6 @@
         width: 20vw;
         height: 9vh;
     }
-
 }
 
 @media(min-width: 1024px){
@@ -93,5 +90,4 @@
         border: 1px solid #656b4e;
         background-color: #F5E7CC;
     }
-
 }

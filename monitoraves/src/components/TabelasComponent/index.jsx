@@ -16,7 +16,6 @@ const TabelasComponent = () =>{
         dispatch(tipoGraficoEscolhido(tipoTabela))
     }
 
-
     return(
         <div className="secao-tabelas">
 

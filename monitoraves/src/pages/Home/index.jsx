@@ -1,4 +1,3 @@
-import "./styles.css";
 import BasePage from "../../components/BasePageComponent";
 import HomeComponent from "../../components/HomeComponent";
 
